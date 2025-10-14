@@ -1,25 +1,11 @@
 package be.pxl.services.domain;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Embeddable;
 
-@Entity
-@Table(name="employee")
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Embeddable
 public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
+    private Long Id;
     private Long organisationId;
-
     private Long departmentId;
     private String name;
     private int age;
