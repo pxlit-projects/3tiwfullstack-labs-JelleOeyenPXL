@@ -41,7 +41,7 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentService.getDepartmentByOrganizationId(organizationId), HttpStatus.OK);
     }
 
-    @GetMapping("/organization/{organizationId}")
+    @GetMapping("/organization/{organizationId}/with-employees")
     public ResponseEntity<List<DepartmentResponse>> getDepartmentsByOrganizationWithEmployees(@PathVariable Long organizationId){
         List<DepartmentResponse> departments = departmentService.getDepartmentByOrganizationIdWithEmployees(organizationId);
         return new ResponseEntity<>(departments, HttpStatus.OK);

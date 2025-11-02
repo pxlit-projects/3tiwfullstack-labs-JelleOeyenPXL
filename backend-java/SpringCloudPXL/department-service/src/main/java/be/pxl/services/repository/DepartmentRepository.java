@@ -14,7 +14,7 @@ import java.util.Optional;
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
     List<Department> findByOrganizationId(Long organizationId);
 
-    @Query("SELECT d FROM Department d LEFT JOIN FETCH d.employees WHERE d.organizationId = :organizationId")
-    List<Department> findByOrganizationIdWithEmployees(@Param("organizationId") Long organizationId);
+//    @Query("SELECT d FROM Department d LEFT JOIN FETCH d.employees WHERE d.organizationId = :organizationId")
+//    List<Department> findByOrganizationIdWithEmployees(@Param("organizationId") Long organizationId);
 
 }
