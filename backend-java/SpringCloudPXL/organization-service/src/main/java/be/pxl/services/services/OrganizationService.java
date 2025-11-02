@@ -22,4 +22,23 @@ public class OrganizationService implements IOrganizationService{
                 .build();
     }
 
+    @Override
+    public OrganizationResponse getOrganizationById(Long id) {
+        return organizationRepository.findById(id).map(this::mapToOrganizationResponse).orElseThrow();
+    }
+
+    @Override
+    public OrganizationResponse getOrganizationByIdWithDepartments(Long id) {
+        return organizationRepository.findById(id).map(this::mapToOrganizationResponse).orElseThrow();
+    }
+
+    @Override
+    public OrganizationResponse getOrganizationByIdWithDepartmentsAndEmployees(Long id) {
+        return organizationRepository.findById(id).map(this::mapToOrganizationResponse).orElseThrow();
+    }
+
+    @Override
+    public OrganizationResponse getOrganizationWithEmployees(Long id) {
+        return organizationRepository.findById(id).map(this::mapToOrganizationResponse).orElseThrow();
+    }
 }

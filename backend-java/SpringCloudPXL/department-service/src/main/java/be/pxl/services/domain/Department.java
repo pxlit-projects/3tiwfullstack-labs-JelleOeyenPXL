@@ -22,7 +22,7 @@ public class Department {
 
     private Long organizationId;
     private String name;
-    @ElementCollection
+    @Transient
     private List<Employee> employees;
     private String position;
 

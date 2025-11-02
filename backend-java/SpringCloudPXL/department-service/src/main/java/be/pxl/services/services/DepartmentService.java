@@ -48,7 +48,7 @@ public class DepartmentService implements IDepartmentService{
 
     @Override
     public List<DepartmentResponse> getDepartmentByOrganizationId(Long organizationId) {
-        return departmentRepository.findbyOrganizationId(organizationId).stream().map(this::mapToDepartmentResponse).toList();
+        return departmentRepository.findByOrganizationId(organizationId).stream().map(this::mapToDepartmentResponse).toList();
     }
 
     @Override

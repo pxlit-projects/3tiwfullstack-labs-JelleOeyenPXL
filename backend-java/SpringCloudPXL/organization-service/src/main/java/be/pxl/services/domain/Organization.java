@@ -21,9 +21,9 @@ public class Organization {
 
     private String name;
     private String address;
-    @ElementCollection
+    @Transient
     private List<Employee> employees;
-    @ElementCollection
+    @Transient
     private List<Department> departments;
 
 }
