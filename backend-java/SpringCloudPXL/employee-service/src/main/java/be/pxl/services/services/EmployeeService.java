@@ -28,6 +28,8 @@ public class EmployeeService implements IEmployeeService{
                 .age(employee.getAge())
                 .name(employee.getName())
                 .position(employee.getPosition())
+                .organizationId(employee.getOrganizationId())
+                .departmentId(employee.getDepartmentId())
                 .build();
 
     }
