@@ -2,18 +2,18 @@ package be.pxl.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * Hello world!
+ * DiscoveryServiceApplication
  *
  */
 @SpringBootApplication
-@EnableDiscoveryClient
-public class OrganizationServiceApplication
+@EnableEurekaServer
+public class DiscoveryServiceApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(OrganizationServiceApplication.class, args);
+        SpringApplication.run(DiscoveryServiceApplication.class,args);
     }
 }
